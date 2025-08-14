@@ -4,8 +4,7 @@ This is the personal portfolio website of **Guy Binyamin**, showcasing his skill
 
 ## 🌐 Live Demo
 
-The site will be hosted using **GitHub Pages**.  
-(Once published, the link will be added here.)
+[https://guybenja.github.io/portfolio/](https://guybenja.github.io/portfolio/)
 
 ## 📄 Features
 
