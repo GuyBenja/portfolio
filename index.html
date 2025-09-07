@@ -8,9 +8,9 @@
   <meta name="description" content="Guy Binyamin — Backend & Full-Stack Developer"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
 
-  <!-- מציג/מסתיר פסקאות מלאות לפי שפת הדף (בלי לגעת ב-script.js) -->
+    <!-- display/hide by page language (no text shortening) -->
   <style>
     html[lang="en"] .lang-he { display: none; }
     html[lang="he"] .lang-en { display: none; }
@@ -21,7 +21,7 @@
     <div class="container nav">
       <div class="nav-left"><strong>Guy Binyamin</strong></div>
 
-      <!-- כפתור המבורגר -->
+      <!-- Hamburger (mobile) -->
       <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <!-- רקע מאחורי התפריט -->
+    <!-- backdrop for side menu -->
   <div class="menu-backdrop" id="menuBackdrop" hidden></div>
 
   <main class="container fade-scope">
@@ -62,11 +62,11 @@
     <section id="about">
       <h2 class="section-title" data-i18n="about_title">About</h2>
       <div class="card">
-        <!-- EN (מלא) -->
+        <!-- EN  -->
         <p class="lang-en">
           I am a passionate software developer with a strong drive to create innovative solutions, combining creative thinking with precise technical execution. Over the years, I have gained experience in developing diverse projects – from AI and Natural Language Processing tools, through interactive web applications, to complex management systems. I believe in continuous learning, effective teamwork, and maintaining high standards of code quality. My goal is not only to solve existing problems but also to identify new opportunities and deliver real value to users and clients.
         </p>
-        <!-- HE (מלא) -->
+        <!-- HE  -->
         <p class="lang-he">
           אני מפתח תוכנה בעל תשוקה אמיתית ליצירת פתרונות חדשניים, עם יכולת לשלב בין חשיבה יצירתית ליישום טכנולוגי מדויק. לאורך הדרך צברתי ניסיון בפיתוח פרויקטים מגוונים – החל מכלים מבוססי בינה מלאכותית ועיבוד שפה טבעית, דרך אתרי אינטרנט אינטראקטיביים, ועד למערכות ניהול מורכבות. אני מאמין בלמידה מתמדת, עבודה בצוות ושמירה על סטנדרטים גבוהים של כתיבת קוד. מטרתי היא לא רק לפתור בעיות קיימות, אלא גם לזהות הזדמנויות חדשות וליצור ערך אמיתי עבור המשתמשים והלקוחות.
         </p>
@@ -149,7 +149,7 @@
 
         <div class="project card">
           <h3>Project #3 — Coming Soon</h3>
-          <!-- אין טקסט כרגע; אם תוסיף—שכפל EN/HE באותו אופן -->
+            <p class="lang-en">Details coming soon.</p>
           <div class="tags"><span class="tag">TBD</span></div>
         </div>
       </div>
