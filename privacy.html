@@ -1,221 +1,167 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Privacy Policy | Guy Binyamin</title>
-<meta name="description" content="Privacy Policy for Guy Binyamin's portfolio website." />
-<style>
-:root { --maxw: 900px; --bg:#ffffff; --fg:#111; --muted:#666; --line:#eee; --pill:#111; --pillfg:#fff; }
-*{box-sizing:border-box}
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; margin:0; color:var(--fg); background:#fafafa; }
-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); }
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 1.25rem; }
-h1 { margin: 0.2em 0 0.4em; font-size: clamp(1.5rem, 2.5vw, 2rem); }
-h2 { margin: 1.2rem 0 .4rem; font-size: 1.2rem; }
-.lang-switch { display: inline-flex; gap: .5rem; align-items: center; }
-.pill { border: 1px solid #ddd; padding: .25rem .6rem; border-radius: 999px; cursor: pointer; user-select: none; background:#fff; }
-.pill[aria-pressed="true"] { background: var(--pill); color: var(--pillfg); border-color: var(--pill); }
-main { max-width: var(--maxw); margin: 0 auto; padding: 1.25rem; }
-.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,.03); }
-section { margin: 1rem 0 1.5rem; }
-.muted { color: var(--muted); font-size: .95rem; }
-a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-footer { border-top: 1px solid var(--line); margin-top: 1rem; }
-footer .wrap { font-size: .95rem; color: var(--muted); }
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta property="og:url" content="https://guybenja.github.io/portfolio/privacy.html">
+  <title>Privacy · Guy Binyamin</title>
+  <meta name="description" content="Privacy Policy for Guy Binyamin portfolio site."/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-[lang="he"] { direction: rtl; font-family: "Noto Sans Hebrew", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-.hide { display:none !important; }
-</style>
+  <!-- הצגה/הסתרה לפי שפת הדף (בלי לקצר טקסט) -->
+  <style>
+    html[lang="en"] .lang-he { display: none; }
+    html[lang="he"] .lang-en { display: none; }
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>Privacy Policy / מדיניות פרטיות</h1>
-    <div class="lang-switch" role="group" aria-label="Language switch">
-      <button id="btn-en" type="button" class="pill" aria-pressed="true">English</button>
-      <button id="btn-he" type="button" class="pill" aria-pressed="false">עברית</button>
+  <!-- Topbar (אותו מבנה כמו בעמוד הבית) -->
+  <div class="topbar">
+    <div class="container nav">
+      <div class="nav-left"><strong>Guy Binyamin</strong></div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="nav-right" id="primaryNav">
+        <a class="btn" href="#" id="langToggle">🇬🇧 EN</a>
+        <!-- קישורי נווט לדף הראשי -->
+        <a href="index.html#about" data-i18n="nav_about">About</a>
+        <a href="index.html#skills" data-i18n="nav_skills">Skills</a>
+        <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+        <a class="btn" href="assets/Guy_Binyamin.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
     </div>
   </div>
-</header>
 
-<main>
-  <!-- English -->
-  <article id="pol-en" lang="en" class="card">
+  <!-- backdrop למגש הצד -->
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+
+  <main class="container" style="padding-top:26px">
     <section>
-      <p class="muted"><strong>Last Updated:</strong> August 21, 2025</p>
-      <h2>1. General</h2>
-      <p>I, <strong>Guy Binyamin</strong>, operate the website <strong>guybenja.github.io/portfolio</strong> (“Website”). I respect visitor privacy and aim to comply with applicable privacy laws, including Israel’s Privacy Protection Law, 1981.</p>
+      <h1 class="title" style="font-size:28px; margin-bottom:12px">
+        <span class="lang-en">Privacy Policy</span>
+        <span class="lang-he">מדיניות פרטיות</span>
+      </h1>
+      <div class="card" style="line-height:1.65">
+        <!-- ===== EN ===== -->
+        <div class="lang-en">
+          <p><strong>Last updated:</strong> 07 Sep 2025</p>
+
+          <p>
+            This website is a personal portfolio operated by Guy Binyamin (“we”, “us”, “our”). We respect your privacy.
+            This policy explains what data we may collect, how we use it, and your choices.
+          </p>
+
+          <h3 style="margin:14px 0 8px">What we collect</h3>
+          <ul>
+            <li><strong>Contact form</strong> (Formspree): name, email, phone (optional), and your message.</li>
+            <li><strong>Basic technical info</strong>: your browser may send standard logs (e.g., IP, user-agent) to the hosting provider (GitHub Pages) for delivery and security.</li>
+            <li><strong>No analytics</strong>: we don’t run third-party analytics or tracking cookies.</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">How we use data</h3>
+          <ul>
+            <li>To respond to your inquiries.</li>
+            <li>To maintain and protect the site (fraud/abuse prevention).</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">Third-party services</h3>
+          <ul>
+            <li><strong>Formspree</strong> (contact submissions). Your message is routed through Formspree and delivered to my email.</li>
+            <li><strong>GitHub Pages</strong> (hosting). Static files are served by GitHub’s CDN/infrastructure.</li>
+            <li>External project links (GitHub, LinkedIn, demos) are governed by their own policies.</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">Cookies</h3>
+          <p>
+            The site itself doesn’t set tracking cookies. We store your language preference locally in your browser (localStorage) to show the last used language. Third-party sites you visit from here may use their own cookies.
+          </p>
+
+          <h3 style="margin:14px 0 8px">Data retention</h3>
+          <p>
+            Contact messages may be retained for as long as needed to communicate with you and maintain records. You can ask to delete them at any time.
+          </p>
+
+          <h3 style="margin:14px 0 8px">Your rights & contact</h3>
+          <p>
+            To access, update, or request deletion of your contact message, email:
+            <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.
+          </p>
+
+          <h3 style="margin:14px 0 8px">Changes</h3>
+          <p>
+            We may update this policy from time to time. The “Last updated” date will reflect the latest version.
+          </p>
+        </div>
+
+        <!-- ===== HE ===== -->
+        <div class="lang-he" dir="rtl">
+          <p><strong>עודכן לאחרונה:</strong> 07 בספטמבר 2025</p>
+
+          <p>
+            אתר זה הוא פורטפוליו אישי המופעל על-ידי גיא בנימין (“אנחנו”). אנו מכבדים את פרטיותך.
+            מסמך זה מסביר אילו נתונים עשויים להיאסף, כיצד אנו משתמשים בהם, ומהן הבחירות שלך.
+          </p>
+
+          <h3 style="margin:14px 0 8px">אילו נתונים נאספים</h3>
+          <ul>
+            <li><strong>טופס יצירת קשר</strong> (Formspree): שם, אימייל, טלפון (אופציונלי) ותוכן ההודעה.</li>
+            <li><strong>מידע טכני בסיסי</strong>: הדפדפן שלך עשוי לשלוח נתוני לוג סטנדרטיים (כגון IP ו-user-agent) לספק האחסון (GitHub Pages) לצורך אבטחה והעברת התוכן.</li>
+            <li><strong>ללא אנליטיקה</strong>: האתר אינו מפעיל כלי אנליטיקה או עוגיות מעקב של צד שלישי.</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">כיצד נעשה שימוש בנתונים</h3>
+          <ul>
+            <li>מענה לפניות שלך.</li>
+            <li>תחזוקה והגנה על האתר (מניעת הונאה/שימוש לרעה).</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">שירותי צד שלישי</h3>
+          <ul>
+            <li><strong>Formspree</strong> (שליחת הודעות יצירת קשר) – ההודעה מנותבת דרך Formspree ונשלחת אל תיבת האימייל שלי.</li>
+            <li><strong>GitHub Pages</strong> (אחסון) – קבצים סטטיים מוגשים באמצעות התשתית של GitHub.</li>
+            <li>קישורים חיצוניים (GitHub, LinkedIn, דמואים) כפופים למדיניות הפרטיות של אותם אתרים.</li>
+          </ul>
+
+          <h3 style="margin:14px 0 8px">עוגיות (Cookies)</h3>
+          <p>
+            האתר עצמו אינו יוצר עוגיות מעקב. אנו שומרים את העדפת השפה שלך באופן מקומי בדפדפן (localStorage) כדי להציג את השפה האחרונה שבה השתמשת.
+            אתרי צד שלישי שאליהם תנווט מכאן עשויים להשתמש בעוגיות משלהם.
+          </p>
+
+          <h3 style="margin:14px 0 8px">שמירת נתונים</h3>
+          <p>
+            הודעות יצירת קשר עשויות להישמר כל עוד נדרש לצורך תקשורת ותיעוד. ניתן לבקש מחיקה בכל עת.
+          </p>
+
+          <h3 style="margin:14px 0 8px">הזכויות שלך ויצירת קשר</h3>
+          <p>
+            לבקשת גישה, עדכון או מחיקה של הודעתך, ניתן לפנות אל:
+            <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.
+          </p>
+
+          <h3 style="margin:14px 0 8px">שינויים</h3>
+          <p>
+            מעת לעת ייתכנו עדכונים למדיניות זו. התאריך “עודכן לאחרונה” ישקף את הגרסה העדכנית.
+          </p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section>
-      <h2>2. Information Collected</h2>
-      <p>The Website collects basic personal information that you voluntarily provide via the contact form:</p>
-      <ul>
-        <li>Name</li>
-        <li>Email address</li>
-        <li>Phone number</li>
-        <li>Message content</li>
-      </ul>
-      <p>Form submissions are processed by <strong>Formspree</strong> (a third-party service). Formspree may collect technical information such as IP address for spam prevention and delivery.</p>
-    </section>
+  <footer style="text-align:center; padding:15px; background-color:#0a0a0a; color:#ccc; font-size:14px;">
+    © Guy Binyamin. All rights reserved. ·
+    <a href="privacy.html" style="color:#ccc; text-decoration:underline; text-underline-offset:2px">Privacy</a>
+  </footer>
 
-    <section>
-      <h2>3. How Your Information Is Used</h2>
-      <ul>
-        <li>To respond to your inquiry and communicate with you.</li>
-        <li>To maintain basic records of communications.</li>
-        <li>To protect the Website from spam/abuse (via Formspree’s anti-spam tools).</li>
-      </ul>
-      <p><em>No tracking cookies or analytics tools are used on this Website.</em></p>
-    </section>
-
-    <section>
-      <h2>4. Legal Basis</h2>
-      <p>The processing of your personal information is based on your <strong>consent</strong> (when you submit the contact form) and on <strong>legitimate interests</strong> (responding to inquiries and maintaining Website security).</p>
-    </section>
-
-    <section>
-      <h2>5. Retention</h2>
-      <p>Contact form submissions are retained only as long as necessary to handle your inquiry and for a reasonable period thereafter, unless a longer retention is required by law or for legitimate business purposes.</p>
-    </section>
-
-    <section>
-      <h2>6. Sharing & Transfers</h2>
-      <p>Your information is not sold or shared with third parties for marketing. It is transmitted to and processed by <strong>Formspree</strong> solely to deliver the form to my email and provide anti-spam protection.</p>
-    </section>
-
-    <section>
-      <h2>7. Security</h2>
-      <p>Reasonable administrative and technical measures are used to help protect submitted information. However, no method of transmission over the Internet is 100% secure.</p>
-    </section>
-
-    <section>
-      <h2>8. Your Rights</h2>
-      <p>Subject to applicable law, you may request to access, correct, or delete your personal information submitted via the contact form. To make a request, contact me at <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.</p>
-    </section>
-
-    <section>
-      <h2>9. Children</h2>
-      <p>The Website is not directed to children under the age of 16, and I do not knowingly collect personal information from children.</p>
-    </section>
-
-    <section>
-      <h2>10. Changes</h2>
-      <p>I may update this Policy from time to time. Material changes will be reflected by updating the “Last Updated” date above.</p>
-    </section>
-
-    <section>
-      <h2>11. Contact</h2>
-      <p>For questions about this Policy or privacy practices, contact: <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.</p>
-    </section>
-
-    <p class="muted">This Policy is provided for general information and does not constitute legal advice.</p>
-  </article>
-
-  <!-- Hebrew -->
-  <article id="pol-he" lang="he" class="card hide">
-    <section>
-      <p class="muted"><strong>עודכן לאחרונה:</strong> 21 באוגוסט 2025</p>
-      <h2>1. כללי</h2>
-      <p>אני, <strong>גיא בנימין</strong>, מפעיל את האתר <strong>guybenja.github.io/portfolio</strong> (“האתר”). אני מכבד את פרטיות המבקרים ופועל בהתאם לדיני הפרטיות החלים, לרבות חוק הגנת הפרטיות, תשמ"א-1981.</p>
-    </section>
-
-    <section>
-      <h2>2. מידע הנאסף</h2>
-      <p>באמצעות טופס יצירת הקשר באתר נאסף מידע אישי בסיסי שמוזן מרצונך:</p>
-      <ul>
-        <li>שם</li>
-        <li>דוא"ל</li>
-        <li>טלפון</li>
-        <li>תוכן ההודעה</li>
-      </ul>
-      <p>שליחת הטופס מתבצעת באמצעות שירות צד שלישי בשם <strong>Formspree</strong>, ועשוי להיאסף מידע טכני (כגון כתובת IP) לצורכי אבטחה ומניעת ספאם.</p>
-    </section>
-
-    <section>
-      <h2>3. מטרות השימוש במידע</h2>
-      <ul>
-        <li>מתן מענה לפניות ויצירת קשר חזרה.</li>
-        <li>תיעוד פנימי של פניות והתקשרויות.</li>
-        <li>אבטחת האתר ומניעת ספאם (באמצעות כלי Formspree).</li>
-      </ul>
-      <p><em>באתר לא נעשה שימוש בעוגיות מעקב (cookies) או בכלי אנליטיקה.</em></p>
-    </section>
-
-    <section>
-      <h2>4. בסיס חוקי לעיבוד</h2>
-      <p>עיבוד המידע מתבצע על בסיס <strong>הסכמה</strong> שלך (בעת שליחת הטופס) ועל בסיס <strong>אינטרס לגיטימי</strong> (מתן מענה לפניות ושמירת אבטחת האתר).</p>
-    </section>
-
-    <section>
-      <h2>5. שמירת מידע</h2>
-      <p>המידע הנשמר מטופסי יצירת קשר יישמר למשך הזמן הנדרש לטיפול בפניה ולתקופה סבירה לאחר מכן, אלא אם נדרש אחרת על פי דין או לצרכים עסקיים לגיטימיים.</p>
-    </section>
-
-    <section>
-      <h2>6. העברה ושיתוף</h2>
-      <p>המידע לא נמכר ולא משותף לצדדים שלישיים לצורכי שיווק. העברת המידע תתבצע רק לשירות <strong>Formspree</strong> לצורך מסירת ההודעה למייל שלי והגנה מפני ספאם.</p>
-    </section>
-
-    <section>
-      <h2>7. אבטחה</h2>
-      <p>מיושמות אמצעים מנהליים וטכניים סבירים להגנה על המידע המועבר, עם זאת אין שיטה בטוחה לחלוטין בהעברה באינטרנט.</p>
-    </section>
-
-    <section>
-      <h2>8. זכויותיך</h2>
-      <p>בכפוף לדין, ניתן לבקש לעיין במידע האישי שנמסר, לתקנו או למחוק אותו. לפניה בעניין זה: <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.</p>
-    </section>
-
-    <section>
-      <h2>9. קטינים</h2>
-      <p>האתר אינו מיועד לילדים מתחת לגיל 16 ואין בכוונתי לאסוף ביודעין מידע אישי מקטינים.</p>
-    </section>
-
-    <section>
-      <h2>10. שינויים</h2>
-      <p>מדי פעם עשויים להתבצע עדכונים למסמך זה. שינויים מהותיים יסומנו באמצעות עדכון תאריך "עודכן לאחרונה" לעיל.</p>
-    </section>
-
-    <section>
-      <h2>11. יצירת קשר</h2>
-      <p>לשאלות בנושא מדיניות פרטיות: <a href="mailto:guybin56@gmail.com">guybin56@gmail.com</a>.</p>
-    </section>
-
-    <p class="muted">מסמך זה נועד למידע כללי בלבד ואינו מהווה ייעוץ משפטי.</p>
-  </article>
-</main>
-
-<footer>
-  <div class="wrap">
-    © Guy Binyamin. All rights reserved.
-  </div>
-</footer>
-
-<script>
-(function(){
-  const btnEN = document.getElementById('btn-en');
-  const btnHE = document.getElementById('btn-he');
-  const en    = document.getElementById('pol-en');
-  const he    = document.getElementById('pol-he');
-
-  function setLang(lang){
-    const isEN = lang === 'EN';
-    document.documentElement.lang = isEN ? 'en' : 'he';
-    document.documentElement.dir  = isEN ? 'ltr' : 'rtl';
-    en.classList.toggle('hide', !isEN);
-    he.classList.toggle('hide', isEN);
-    btnEN.setAttribute('aria-pressed', String(isEN));
-    btnHE.setAttribute('aria-pressed', String(!isEN));
-    localStorage.setItem('privacy_lang', lang);
-  }
-
-  // init
-  setLang(localStorage.getItem('privacy_lang') || 'EN');
-  btnEN.addEventListener('click', ()=> setLang('EN'));
-  btnHE.addEventListener('click', ()=> setLang('HE'));
-})();
-</script>
+  <script src="script.js" defer></script>
 </body>
 </html>
